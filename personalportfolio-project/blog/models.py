@@ -1,10 +1,10 @@
 from django.db import models
 
 class Blog(models.Model):
-    title = models.CharField(max_length=75)
-    pub_date = models.DateField()
+    title = models.CharField(max_length=255)
+    pub_date = models.DateTimeField()
     image = models.ImageField(upload_to='images/')
-    body = models.TextField(max_length=150)
+    body = models.TextField()
 
 # Create a blog model (title; pub_date; body; image)
 # Add blog app to settings
