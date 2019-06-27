@@ -9,6 +9,9 @@ class Blog(models.Model):
     def summary(self):
         return self.body[:100]
 
+    def pub_date_pretty(self):
+        return self.pub_date.strftime('%b %e, %Y')
+
 # Create a blog model (title; pub_date; body; image)
 # Add blog app to settings
 # Create a migration
