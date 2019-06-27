@@ -51,14 +51,18 @@
 
   <main role="main">
     <div class="container">
+      <h1 class="text-center pt-3">Welcome to Henriette's Blog</h1>
+      <br>
+      <br>
+      <h2>Latest Posts</h2>
+      <hr>
 
+      {% for blog in blogs.all %}
 
-    <h1 class="text-center pt-3">Welcome to Henriette's Blog</h1>
-    <br>
-    <br>
-    <h2>Latest Posts</h2>
-    <hr>
+      {{ blog.title }}
+      <br>
 
+      {% endfor %}
     </div>
   </main>
 
