@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -42,7 +43,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">LinkedIn</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
+          <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
           <a class="nav-item nav-link" href="#">Blog</a>
         </div>
       </div>
@@ -58,6 +59,7 @@
           <p class="lead text-muted"> Building websites, however simple, helps me to understand Django better.</p>
           <a href="mailto:textual.infomail@gmail.com" class="btn btn-primary my-2">Contact</a>
         </p>
+        <img src="{% static 'convent.jpg' %}" height="200" width="300" alt="Image not available">
       </div>
     </section>
 
