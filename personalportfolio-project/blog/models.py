@@ -6,8 +6,24 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='images/')
     body = models.TextField()
 
+    def summary(self):
+        return self.body[:100]
+
 # Create a blog model (title; pub_date; body; image)
 # Add blog app to settings
 # Create a migration
 # Migrate
 # Add to the admin
+
+"""
+TO GET THE BLOGS ONLINE:
+* create a for loop in the /allblogs.html file
+* in blog/views, import the Blog class:
+     from .models import Blog
+  in blog/views make a variable for objects created with this class:
+     blogs = Blog.objects
+  add this variable to the return code line:
+     return render(request, 'blog/allblogs.html', {'blogs':blogs})
+
+This is similar to what is done to upload the jobs cards.
+"""
