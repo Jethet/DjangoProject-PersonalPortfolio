@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def allblogs(request):
-    return render(request, 'allblogs.html')
+    return render(request, 'blog/allblogs.html')
