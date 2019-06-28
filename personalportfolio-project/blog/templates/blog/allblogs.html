@@ -58,7 +58,7 @@
       <h2>Latest Posts</h2>
       <hr>
 
-      {% for blog in blogs.all %}
+      {% for blog in blogs.all reversed %}
 
       <a href="{% url 'detail' blog.id %}"> <h3>{{ blog.title }}</h3></a>
 
